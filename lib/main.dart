@@ -13,7 +13,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueAccent[200],
+        backgroundColor: const Color.fromARGB(255, 66, 128, 236),
+
+        // appBar
+        appBar: AppBar(
+          title: Text(
+            "My Appp Bar",
+            style: TextStyle(
+              color: Colors.white, // set text color to white
+            ),
+          ),
+
+          backgroundColor: const Color.fromARGB(255, 203, 52, 92),
+          elevation: 0, // for remove shadow
+          leading: Icon(Icons.menu_book_sharp), // icon
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.logout_rounded),
+            ),
+          ],
+        ),
+
+        // body app
         body: Center(
           child: Container(
             height: 300,
@@ -23,8 +45,8 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             padding: const EdgeInsets.all(20), // Padding inside the container
-            
-            
+
+            // use column to both the text and the icon
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -37,11 +59,22 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20), // Space between text and icon
-                const Icon(
-                  Icons.favorite_outline,
-                  color: Colors.white,
-                  size: 48,
-                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(
+                      Icons.favorite_outline,
+                      color: Colors.white,
+                      size: 48,
+                    ),
+                    Icon(
+                      Icons.home,
+                      color: Colors.white,
+                      size: 48,
+                    ),
+                  ],
+                )
               ],
             ),
           ),
