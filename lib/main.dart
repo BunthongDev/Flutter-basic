@@ -36,6 +36,8 @@ class MyApp extends StatelessWidget {
         ),
 
         // body app
+
+        /*
         body: Center(
           child: Container(
             height: 300,
@@ -78,6 +80,33 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
+        ),
+        */
+
+        // body with column
+        body: Column(
+          children: [
+            //1st Box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple,
+            ),
+
+            //2nd box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepOrange,
+            ),
+
+            //3rd box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.amberAccent,
+            )
+          ],
         ),
       ),
     );
