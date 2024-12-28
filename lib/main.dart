@@ -84,31 +84,28 @@ class MyApp extends StatelessWidget {
         */
 
         // body with column
-        body: Column(
+        body: ListView(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             //1st Box
-            Expanded(
-              child: Container(
-                color: Colors.deepPurple,
-              ),
+
+            Container(
+              height: 350,
+              color: Colors.deepPurple,
             ),
 
             //2nd box
-            Expanded(
-              flex: 2, //Use flex to control the proportional layout of widgets when dividing space dynamically.
-              child: Container(
-                color: Colors.deepOrange,
-              ),
+            Container(
+              height: 350,
+              color: Colors.deepOrange,
             ),
 
             //3rd box
-            Expanded(
-              child: Container(
-                color: Colors.amberAccent,
-              ),
-            )
+            Container(
+              height: 350,
+              color: Colors.amberAccent,
+            ),
           ],
         ),
       ),
