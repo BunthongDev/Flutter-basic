@@ -87,14 +87,29 @@ class MyApp extends StatelessWidget {
 
           // body with column
           // we use ListView when we want them to be scroll
-          body: GridView.builder(
-            itemCount: 887,
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 10),
-            itemBuilder: (context, index) => Container(
-              color: Colors.amberAccent,
-              margin: EdgeInsets.all(4),
-            ),
+          body: Stack(
+            children: [
+              // big box
+              Container(
+                height: 300,
+                width: 300,
+                color: Colors.blue[900],
+              ),
+
+              // medium box
+              Container(
+                height: 200,
+                width: 200,
+                color: const Color.fromARGB(255, 20, 161, 13),
+              ),
+
+              // small box
+              Container(
+                height: 100,
+                width: 100,
+                color: const Color.fromARGB(255, 161, 13, 144),
+              )
+            ],
           )),
     );
   }
