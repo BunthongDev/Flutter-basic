@@ -3,11 +3,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  List names = ["Titi", "Loin", "haru"];
 
   @override
   Widget build(BuildContext context) {
@@ -85,30 +87,11 @@ class MyApp extends StatelessWidget {
 
         // body with column
         // we use ListView when we want them to be scroll
-        body: Row(
-          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          // scrollDirection: Axis.horizontal,
-          children: [
-            //1st Box
-
-            Container(
-              width: 350,
-              color: Colors.deepPurple,
-            ),
-
-            //2nd box
-            Container(
-              width: 350,
-              color: Colors.deepOrange,
-            ),
-
-            //3rd box
-            Container(
-              width: 350,
-              color: Colors.amberAccent,
-            ),
-          ],
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(names[index]),
+          ),
         ),
       ),
     );
