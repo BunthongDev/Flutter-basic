@@ -15,31 +15,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 66, 128, 236),
+          backgroundColor: const Color.fromARGB(255, 66, 128, 236),
 
-        // appBar
-        appBar: AppBar(
-          title: Text(
-            "My Appp Bar",
-            style: TextStyle(
-              color: Colors.white, // set text color to white
+          // appBar
+          appBar: AppBar(
+            title: Text(
+              "My Appp Bar",
+              style: TextStyle(
+                color: Colors.white, // set text color to white
+              ),
             ),
+
+            backgroundColor: const Color.fromARGB(255, 203, 52, 92),
+            elevation: 0, // for remove shadow
+            leading: Icon(Icons.menu_book_sharp), // icon
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.logout_rounded),
+              ),
+            ],
           ),
 
-          backgroundColor: const Color.fromARGB(255, 203, 52, 92),
-          elevation: 0, // for remove shadow
-          leading: Icon(Icons.menu_book_sharp), // icon
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.logout_rounded),
-            ),
-          ],
-        ),
+          // body app
 
-        // body app
-
-        /*
+          /*
         body: Center(
           child: Container(
             height: 300,
@@ -85,15 +85,17 @@ class MyApp extends StatelessWidget {
         ),
         */
 
-        // body with column
-        // we use ListView when we want them to be scroll
-        body: ListView.builder(
-          itemCount: names.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(names[index]),
-          ),
-        ),
-      ),
+          // body with column
+          // we use ListView when we want them to be scroll
+          body: GridView.builder(
+            itemCount: 887,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 10),
+            itemBuilder: (context, index) => Container(
+              color: Colors.amberAccent,
+              margin: EdgeInsets.all(4),
+            ),
+          )),
     );
   }
 }
