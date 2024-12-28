@@ -85,26 +85,28 @@ class MyApp extends StatelessWidget {
 
         // body with column
         body: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             //1st Box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple,
+            Expanded(
+              child: Container(
+                color: Colors.deepPurple,
+              ),
             ),
 
             //2nd box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepOrange,
+            Expanded(
+              child: Container(
+                color: Colors.deepOrange,
+              ),
             ),
 
             //3rd box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.amberAccent,
+            Expanded(
+              child: Container(
+                color: Colors.amberAccent,
+              ),
             )
           ],
         ),
