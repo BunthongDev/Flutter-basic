@@ -97,6 +97,7 @@ class MyApp extends StatelessWidget {
 
             //2nd box
             Expanded(
+              flex: 2, //Use flex to control the proportional layout of widgets when dividing space dynamically.
               child: Container(
                 color: Colors.deepOrange,
               ),
