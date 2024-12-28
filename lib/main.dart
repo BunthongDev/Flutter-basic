@@ -84,26 +84,28 @@ class MyApp extends StatelessWidget {
         */
 
         // body with column
-        body: ListView(
+        // we use ListView when we want them to be scroll
+        body: Row(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           // crossAxisAlignment: CrossAxisAlignment.center,
+          // scrollDirection: Axis.horizontal,
           children: [
             //1st Box
 
             Container(
-              height: 350,
+              width: 350,
               color: Colors.deepPurple,
             ),
 
             //2nd box
             Container(
-              height: 350,
+              width: 350,
               color: Colors.deepOrange,
             ),
 
             //3rd box
             Container(
-              height: 350,
+              width: 350,
               color: Colors.amberAccent,
             ),
           ],
