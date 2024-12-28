@@ -88,6 +88,7 @@ class MyApp extends StatelessWidget {
           // body with column
           // we use ListView when we want them to be scroll
           body: Stack(
+            alignment: Alignment.topRight,
             children: [
               // big box
               Container(
