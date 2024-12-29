@@ -28,6 +28,9 @@ class FirstPage extends StatelessWidget {
               leading: Icon(Icons.home),
               title: Text("Home"),
               onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+
                 // go to the home page
                 Navigator.pushNamed(context, '/homepage');
               },
@@ -36,7 +39,10 @@ class FirstPage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.settings),
               title: Text("Setting"),
-              onTap: (){
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+
                 // go to setting page
                 Navigator.pushNamed(context, '/settingspage');
               },
